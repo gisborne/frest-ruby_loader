@@ -11,3 +11,5 @@ module Frest
     module_function :load
   end
 end
+
+Frest::Core::Loaders.register_loader loader: Frest::RubyLoader, file_types: ['rb'], type_name: 'rb'
