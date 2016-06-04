@@ -3,9 +3,13 @@ require_relative "ruby_loader/version"
 module Frest
   module RubyLoader
     def load content:, id:, **others
+      @returns = nil
+
       eval content
       module_function id
-      method id
+      result = method id
+
+      Frest::RichFunction.enrich(result)
     end
 
     module_function :load
