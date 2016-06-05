@@ -9,7 +9,7 @@ module Frest
       module_function id
       result = method id
 
-      Frest::RichFunction.enrich(result)
+      Frest::RichFunction.enrich(fn: result)
     end
 
     module_function :load
