@@ -4,4 +4,3 @@ source 'https://rubygems.org'
 gemspec
 gem 'frest-core',             path: '../frest-core'
 gem 'frest-rich_function',    path: '../frest-rich_function'
-gem 'frest-core',             path: '../frest-core'
