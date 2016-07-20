@@ -4,7 +4,7 @@ require 'frest/rich_function'
 
 module Frest
   module RubyLoader
-    def load content:, id:, **c
+    module_function def load content:, id:, **c
       @returns = nil
 
       eval content
@@ -14,7 +14,9 @@ module Frest
       Frest::RichFunction::enrich(fn: result)
     end
 
-    module_function :load
+    module_function def types
+      {file_types: ['rb'], type_name: 'rb'}
+    end
   end
 end
 
